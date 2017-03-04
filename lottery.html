@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue - 簡易隨機數字抽獎</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>vue - 簡易隨機數字抽獎</h2>
+        <div id="app">
+            <div class="lottery">
+                <div class="input-group">
+                    <label for="amount">▶ 想要抽出的數量：</label>
+                    <input v-model="amount" type="number" min="1" id="amount">
+                </div>
+                <div class="input-group">
+                    <label for="min">▶ 請填入最<span>小</span>號碼：</label>
+                    <input v-model="min" type="number" min="0" id="min">
+                </div>
+                <div class="input-group">
+                    <label for="max">▶ 請填入最<span>大</span>號碼：</label>
+                    <input v-model="max" type="number" min="0" id="max">
+                </div>
+                <div class="input-group">
+                    <button id="submit" class="btn" onclick="handle()">送出</button>
+                </div>
+            </div>
+            <div class="output">
+                <p class="error">{{warn}}</p>
+                <div>
+                    <span>{{result}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="lottery.js"></script>
+
+</body>
+</html>

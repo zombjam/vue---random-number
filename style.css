@@ -1,0 +1,88 @@
+*{
+	margin: 0;
+	padding: 0;
+    text-decoration:none;
+    color:#474747;
+    font-family: Verdana, "微軟正黑體";
+	background-color: #f7f7f7;
+	box-sizing: border-box;
+	user-select: none;
+}
+.container{
+	width: 960px;
+	margin: 50px auto 0;
+}
+
+h2{
+	padding: 15px 0 20px;
+	text-align: center;
+	font-size: 32px;
+	letter-spacing: 2px;
+	text-shadow: 3px 3px 0 rgba(102, 204, 255, .35),
+				 -3px -3px 0 rgba(217, 104, 144, .35);
+}
+
+.lottery{
+	/*outline: 1px solid #f00;*/
+}
+
+.input-group{
+	padding-bottom: 15px;
+	text-align: center;
+}
+
+.input-group:last-child{
+	padding-top: 15px;
+}
+
+label{
+	vertical-align: middle;
+	font-size: 20px;
+}
+
+label> span{
+    color:#D96890;
+    font-weight: bold;
+}
+
+input{
+	width: 100px;
+	padding: 5px 7px;
+	vertical-align: middle;
+	font-size: 16px;
+	text-align: center;
+	background-color: transparent;
+	outline: none;
+	border: 1px solid #aaa;
+}
+
+.btn{
+    font-size: 18px;
+    padding: 8px 25px;
+    background-color:#5A5F71;
+    box-shadow: 0 5px #b8bdd1;
+    border-radius: 2px;
+    border:none;
+    outline: none;
+    color:#eee;
+}
+.btn:active{
+    box-shadow: 0 2px #b8bdd1;
+    transform: translateY(2px);
+}
+
+.output{
+	width: 80%;
+	margin: 0 auto;
+	padding: 30px 0px;
+	text-align: center;
+}
+
+.error{
+	font-size: 20px;
+	color: #D96890;
+}
+
+.output span{
+	font-size: 26px;
+}
