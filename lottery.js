@@ -36,7 +36,6 @@ var app = new Vue({
                 vm.max = parseInt(vm.max);
                 vm.min = parseInt(vm.min);
 
-                // 每次執行時，清空才能放東西進去 -> 應該有更好的作法(?)
                 vm.lotteryNumner = [];
                 vm.result = '';
 
@@ -58,7 +57,7 @@ var app = new Vue({
                 lotto_obj = vm.lotteryNumner.split(',');
                 for(var i=0; i<lotto_obj.length; i++){
                     // lotto_obj[i] = lotto_obj[i];
-                    if(lotto_obj[i].length==1){
+                    if(lotto_obj[i]<10){
                         lotto_obj[i] = '0'+ lotto_obj[i];
                     }
                 }
@@ -76,11 +75,15 @@ var app = new Vue({
         },
         stopIt: function(){
             setTimeout('clearTimeout(T)', 500);
+        },
+        reset: function(){
+            this.min= '';
+            this.max= '';
+            this.amount= '';
+            this.warn= '';
+            this.lotteryNumner= [];
+            this.result = '';
         }
     }
 });
 
-var handle = function(){
-    app.lottery();
-    app.stopIt();
-}
