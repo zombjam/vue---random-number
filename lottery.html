@@ -24,7 +24,8 @@
                     <input v-model="max" type="number" min="0" id="max">
                 </div>
                 <div class="input-group">
-                    <button id="submit" class="btn" onclick="handle()">送出</button>
+                    <button id="submit" class="btn" @click="lottery(),stopIt()">送出</button>
+                    <button id="reset" class="btn" @click="reset">重置</button>
                 </div>
             </div>
             <div class="output">
